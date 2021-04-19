@@ -16,6 +16,7 @@ export const Count = (props) => {
       <h1>{count}</h1>
       <button onClick={() => dispatch(type.add(2))}>Add</button>
       <button onClick={() => dispatch(type.sub(2))}>Subtract</button>
+      <Test/>
     </div>
   );
 };
