@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 //GLOBAL STATE
-import Bundle from "../appState/index.js";
-const {type, AppContext} = Bundle
+import bundle from "../appState/index.js";
+const {type, AppContext} = bundle
 
-export const Count = (props) => {
+const Count = (props) => {
 
   //PULL STATE AND DISPATCH FROM CONTEXT
   const {state, dispatch} = useContext(AppContext);
@@ -16,7 +16,8 @@ export const Count = (props) => {
       <h1>{count}</h1>
       <button onClick={() => dispatch(type.add(2))}>Add</button>
       <button onClick={() => dispatch(type.sub(2))}>Subtract</button>
-      <Test/>
     </div>
   );
 };
+
+export default Count
